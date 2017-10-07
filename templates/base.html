@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 {% load staticfiles %}
 {% load blog_tags %}
+<!DOCTYPE html>
 <html>
 <head>
     <title>Xerxes_Blog</title>
@@ -62,6 +62,9 @@
         </div>
     </header>
 </div>
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
+<div class="copyrights">Modified by <a href="http://zmrenwu.com/">追梦人物的博客</a></div>
+
 
 <div class="content-body">
     <div class="container">
@@ -73,7 +76,6 @@
             <aside class="col-md-4">
                 {% block toc %}
                 {% endblock toc %}
-            </aside>
                 <div class="widget widget-recent-posts">
                     <h3 class="widget-title">最新文章</h3>
                     {% get_recent_posts as recent_post_list %}
