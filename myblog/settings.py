@@ -25,7 +25,7 @@ SECRET_KEY = 'z*bk%(7erp!$5z0qk%_hsgj*8@1lz8(-(d*3v2p*y#@(6r3@ua'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.xerxes.site']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'myblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+		'/home/xerxes/sites/xerxes.site/myblog/templates',
+			],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
