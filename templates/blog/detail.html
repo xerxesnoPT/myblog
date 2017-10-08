@@ -16,7 +16,16 @@
             </header>
             <div class="entry-content clearfix">
                 {{ post.body|safe }}
-            </div>
+            <hr>
+                <div class="widget-tag-cloud">
+                    <ur>
+                        tags:
+                        {% for tag in post.tags.all %}
+                        <li><a href="{% url 'blog:tag' tag.pk %}"># {{ tag.name }}</a> </li>
+                        {% endfor %}
+                    </ur>
+                </div>
+            </div >
         </article>
     <section class="comment-area" id="comment-area">
     <hr>
