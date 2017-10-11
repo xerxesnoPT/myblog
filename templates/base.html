@@ -122,8 +122,8 @@
                     <h3 class="widget-title">标签云</h3>
                     {% get_tags as tag_list %}
                     <ul>
-                        <li>
                         {% for t in tag_list %}
+                        <li>
                             <a href="{% url 'blog:tag' t.pk %}">{{ t.name }}</a>
                         </li>
                        {% empty %}
